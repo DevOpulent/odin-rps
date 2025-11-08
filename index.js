@@ -2,6 +2,11 @@ let playerScore = 0;
 let computerScore = 0; 
 
 const options = ["rock", "paper","scissors"];
+const rockButton = document.querySelector('.rock')
+const paperButton = document.querySelector('.paper')
+const scissorsButton = document.querySelector('.scissors')
+
+const outcomeDiv = document.querySelector('.outcome')
 
 function getComputerChoice() {  
     const choice = options [Math.floor(Math.random() * options.length)];
@@ -68,12 +73,6 @@ function disableButtons() {
     paperButton.disabled = true;
     scissorsButton.disabled = true;
 }
-
-        const rockButton = document.querySelector('.rock')
-        const paperButton = document.querySelector('.paper')
-        const scissorsButton = document.querySelector('.scissors')
-
-        const outcomeDiv = document.querySelector('.outcome')
 
         rockButton.addEventListener('click', () => {
             const computerSelection = getComputerChoice();
